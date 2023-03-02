@@ -153,6 +153,36 @@
     },
     "diy": {
         "name": "DIY devices",
+        "tx_145_433": {
+            "BluePill_tx": {
+                "product_name": "STM32 BluePill VHF/UHF TX",
+                "upload_methods": ["stlink"],
+                "platform": "stm32",
+                "firmware": "STM32_DIY_VHF_TX",
+                "features": ["buzzer", "unlock-higher-power", "fan"],
+                "stlink": {
+                    "cpus": ["STM32F103C8T6"],
+                    "offset": "0x4000",
+                    "bootloader": "r9m_bootloader.bin"
+                }
+                ,"prior_target_name": "DIY_VHF_UHF_STM32_TX_SX127x"
+            }
+        },
+        "rx_145_433": {
+            "BluePill_rx": {
+                    "product_name": "STM32 BluePill VHF/UHF RX",
+                    "upload_methods": ["stlink"],
+                    "platform": "stm32",
+                    "firmware": "STM32_DIY_VHF_RX",
+                    "features": ["sbus-uart"],
+                    "stlink": {
+                        "cpus": ["STM32F103C8T6"],
+                        "offset": "0x8000",
+                        "bootloader": "r9m_bootloader.bin"
+                   },
+                   "prior_target_name": "DIY_VHF_UHF_STM32_RX_SX127x"
+            }
+        },
         "tx_900": {
             "ttgov1": {
                 "product_name": "DIY TTGO V1 900MHz TX",
