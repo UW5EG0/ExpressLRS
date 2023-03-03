@@ -3,7 +3,7 @@
     #define DEVICE_NAME "DIY STM32 TX"
 #endif
 
-#define TARGET_USE_EEPROM               1
+#define TARGET_USE_EEPROM               0
 #define TARGET_EEPROM_ADDR              0x51
 #define TARGET_EEPROM_400K
 
@@ -19,7 +19,8 @@
 #define GPIO_PIN_RST                    PC14
 #define GPIO_PIN_RX_ENABLE              GPIO_PIN_RFswitch_CONTROL
 #define GPIO_PIN_TX_ENABLE              GPIO_PIN_RFamp_APC1
-#define GPIO_PIN_SDA                    PB7
+#define GPIO_PIN_OLED_RST               PB8
+#define GPIO_PIN_SDA                    PB7 
 #define GPIO_PIN_SCL                    PB6
 #define GPIO_PIN_RCSIGNAL_RX            PB11 // not yet confirmed
 #define GPIO_PIN_RCSIGNAL_TX            PB10 // not yet confirmed
@@ -47,4 +48,14 @@
 #if !defined(POWER_OUTPUT_VALUES)
     #define POWER_OUTPUT_VALUES         {720,875,1000,1140,1390,1730,2100,2600}
     #define POWER_OUTPUT_VALUES_868     {650,860,1000,1160,1420,1730,2100,2600}
+#endif
+
+#define USE_OLED_I2C
+#define OPT_USE_OLED_I2C true
+
+#define HAS_FIVE_WAY_BUTTON
+#define GPIO_PIN_JOYSTICK           A0
+#ifndef JOY_ADC_VALUES
+/* Joystick values              {UP, DOWN, LEFT, RIGHT, ENTER, IDLE}*/
+#define JOY_ADC_VALUES          {459, 509, 326, 182, 91, 1021}
 #endif

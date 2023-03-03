@@ -7,6 +7,8 @@ https://github.com/jaxxzer
 #endif
 #define DEVICE_NAME "DIY STM32 RX"
 
+  #define TARGET_USE_EEPROM               1
+  #define TARGET_EEPROM_ADDR              0x50
 
 #define GPIO_PIN_NSS            PB12 //confirmed on SLIMPLUS, R900MINI
 #define GPIO_PIN_DIO0           PA15 //confirmed on SLIMPLUS, R900MINI
@@ -32,6 +34,10 @@ https://github.com/jaxxzer
     /* PB9: antenna 1 (left) = HIGH, antenna 2 (right) = LOW
      * Note: Right Antenna is selected by default, LOW */
     #define GPIO_PIN_ANT_CTRL PB9
+
+    #define USE_OLED_I2C
+#define OPT_USE_OLED_I2C true
+
 
 //#define POWER_OUTPUT_FIXED 15 //MAX power for 900 RXes
 // External pads

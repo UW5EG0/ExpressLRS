@@ -47,6 +47,11 @@ __attribute__ ((used)) const firmware_options_t firmwareOptions = {
     .domain = 4,
     #elif defined(Regulatory_Domain_EU_433)
     .domain = 5,
+    #elif defined(Regulatory_Domain_ALL_VHF)
+    .domain = 6,
+    #elif defined(Regulatory_Domain_ALL_UHF)
+    .domain = 7,
+    
     #else
     #error No regulatory domain defined, please define one in user_defines.txt
     #endif
