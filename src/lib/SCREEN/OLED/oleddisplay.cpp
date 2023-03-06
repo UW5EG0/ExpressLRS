@@ -380,7 +380,7 @@ void OLEDDisplay::displaySending()
 // helpers
 static void helperDrawImage(menu_item_t menu)
 {
-    if (OPT_USE_OLED_SPI_SMALL)
+    if (OPT_USE_OLED_SPI_SMALL || OPT_USE_OLED_I2C)
    {
 
         // Adjust these to move them around on the screen
